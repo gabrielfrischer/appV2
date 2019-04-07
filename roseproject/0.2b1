@@ -1,0 +1,14 @@
+Installing xhtml2pdf…
+Collecting xhtml2pdf
+Requirement already satisfied: six in /home/gabriel/Env/roseV2wrapper-JYKmOG_W/lib/python3.6/site-packages (from xhtml2pdf) (1.12.0)
+Requirement already satisfied: html5lib>=1.0 in /home/gabriel/Env/roseV2wrapper-JYKmOG_W/lib/python3.6/site-packages (from xhtml2pdf) (1.0.1)
+Requirement already satisfied: Pillow in /home/gabriel/Env/roseV2wrapper-JYKmOG_W/lib/python3.6/site-packages (from xhtml2pdf) (6.0.0)
+Collecting pyPdf2 (from xhtml2pdf)
+Collecting reportlab>=3.0 (from xhtml2pdf)
+  Downloading https://files.pythonhosted.org/packages/bd/66/e02e488a7022811f839c6b9f5aeb5ebecfccc85b6da115db7c7ec5fc8732/reportlab-3.5.18-cp36-cp36m-manylinux1_x86_64.whl (2.6MB)
+Requirement already satisfied: webencodings in /home/gabriel/Env/roseV2wrapper-JYKmOG_W/lib/python3.6/site-packages (from html5lib>=1.0->xhtml2pdf) (0.5.1)
+Installing collected packages: pyPdf2, reportlab, xhtml2pdf
+Successfully installed pyPdf2-1.26.0 reportlab-3.5.18 xhtml2pdf-0.2.3
+
+Adding xhtml2pdf to Pipfile's [packages]…
+Installing dependencies from Pipfile.lock (c974a4)…

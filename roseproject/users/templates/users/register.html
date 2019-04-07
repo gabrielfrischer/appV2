@@ -1,0 +1,32 @@
+{% extends "efab_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Register{% endblock title %}
+{% block sidebarBrand %}Sign Up{% endblock sidebarBrand %}
+{% block navButtons %}
+ <li class="nav-item active">
+        <a class="nav-link" href="{% url 'register' %}">Sign Up<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+      </li>
+{% endblock navButtons %}
+{% block content %}
+<div class="jumbotron">
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+    <legend class="border-bottom mb-4">Become a Tester</legend>
+  {{form|crispy}}
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+    </div>
+  </form>
+  <br/>
+  <div class="border-top pt-3">
+    <small class="text-muted">Already Have An Account? <a class="btn btn-light" href="{% url 'login' %}">Login</a>
+
+    </small>
+  </div>
+</div>
+{% endblock content %}

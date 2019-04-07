@@ -10,6 +10,8 @@ djangorestframework = "*"
 django-crispy-forms = "*"
 pillow = "*"
 django-cleanup = "*"
+"xhtml2pdf" = "*"
+django-easy-pdf = "*"
 
 [dev-packages]
 

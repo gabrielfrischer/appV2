@@ -1,0 +1,106 @@
+{% extends "efab_app/base.html" %}
+{% block title %} Home {% endblock title %}
+{% block sidebarBrand %}Details{% endblock sidebarBrand %}
+
+{% block content %}
+
+  
+<div class="jumbotron" ="homeJumbotron">
+  <h1 class="display-4">
+  
+</h1>
+  <p class="lead text-center">Administered by {{evaluation.nameOfTester}} on {{evaluation.startOfTestDatetime}} </p>
+  <p>
+  <div class="row">
+  <div class="col center-block text-center">
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1{{evaluation.id}}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1{{evaluation.id}}">Show Scores</a>
+  </div>
+  <div class="col center-block text-center">
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2{{evaluation.id}}" aria-expanded="false" aria-controls="multiCollapseExample2{{evaluation.id}}">Show Contact Info</button>
+</p>
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1{{evaluation.id}}">
+      <div class="card card-body addBorderRadius">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Step #</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{ evaluation.step1Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>{{ evaluation.step2Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>{{ evaluation.step3Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>{{ evaluation.step4Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>{{ evaluation.step5Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>{{ evaluation.step6Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>{{ evaluation.step7Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">8a</th>
+      <td>{{ evaluation.step8aScore}}</td>
+    </tr>
+    <tr>
+      <th scope="row">8b</th>
+      <td>{{ evaluation.step8bScore}}</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>{{ evaluation.step9Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>{{ evaluation.step10Score}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Total</th>
+      <td>{{ evaluation.totalScore}}</td>
+    </tr>
+    
+  </tbody>
+</table>      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2{{evaluation.id}}">
+      <div class="card card-body addBorderRadius">
+        Name of Participant: <u>{{ evaluation.nameOfTestee}}</u><br>Email of Participant: <u>{{evaluation.emailOfTestee}}</u>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+</div>
+
+
+
+  
+{% endblock content %}
+
+
+
